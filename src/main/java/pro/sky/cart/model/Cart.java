@@ -4,7 +4,7 @@ package pro.sky.cart.model;
 import java.util.Objects;
 
 public class Cart {
-    private Integer idCounter = 1;
+    private static Integer idCounter = 1;
     private final Integer id;
     private String name;
     private Double price;
