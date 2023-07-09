@@ -1,20 +1,28 @@
 package pro.sky.cart.controller;
 
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
-import pro.sky.cart.model.Cart;
+import org.springframework.web.bind.annotation.*;
+import pro.sky.cart.service.BasketService;
+
 
 @RestController
+@RequestMapping("/store/order")
 public class CartController {
 
-    @PostMapping("/store/order/add")
-    public String add(Cart id) {
-        return "add";
+    private final BasketService BasketService;
+
+    public CartController(BasketService BasketService) {
+        this.BasketService = BasketService;
     }
 
-    @PostMapping("/store/order/get")
-    public String get() {
-        return "get";
+    @GetMapping("/add")
+    public String add(@RequestParam ("name") String name, @RequestParam("price") Double price){
+        BasketService.add(name, price);
+        return "товар <b> " + name + " " + price + "</b> добавлен";
+    }
+
+    @GetMapping("/get")
+    public String get(){
+        return BasketService.get();
     }
 }

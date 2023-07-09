@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/store/order/get" method="post" class="basket">
+
+    <h1>
+        Получить заказ
+    </h1>
+    <div class="basket-item">
+        Товары:
+        <div>
+            <h2 class="basket-item">
+                Скейтборд
+                Цена 15 руб
+                Номер заказа 2465
+                <img src="img/skateboard.jpg" alt="skateboard" class="basket-item-img">
+            </h2>
+        </div>
+        <div>
+            <h2 class="basket-item">
+                Самокат
+                Цена 25 руб
+                Номер заказа 4327
+                <img src="img/samokat.jpg" alt="samokat" class="basket-item-img">
+            </h2>
+        </div>
+        <div>
+            <h2 class="basket-item">
+                Велосипед
+                Цена 50 руб
+                Номер заказа 7892
+                <img src="img/bicycle.jpg" alt="bicycle" class="basket-item-img">
+            </h2>
+        </div>
+        <div>
+            <h2 class="basket-item">
+                Машина
+                Цена 5 000 руб
+                Номер заказа 3245
+                <img src="img/car.jpg" alt="car" class="basket-item-img">
+            </h2>
+        </div>
+    </div>
+    <label>
+        <input type="text" name="order" placeholder="Введите номер заказа">
+    </label>
+    <input type="submit" value="Получить заказ">
+
+</form>
+
+</body>
+</html>
